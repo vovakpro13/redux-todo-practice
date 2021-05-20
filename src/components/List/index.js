@@ -6,11 +6,7 @@ const List = () => {
     const todos = useSelector(state => state);
     console.log(todos);
     return (
-        <div>
-            {
-                todos.map(({todo, id}) => <Todo text={todo} id={id}/>)
-            }
-        </div>
+        <div>{todos.map(({todo, id}) => <Todo key={id} text={todo} id={id}/>)}</div>
     );
 }
 
